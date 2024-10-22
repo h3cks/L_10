@@ -1,0 +1,284 @@
+/* Базові стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex; /* Використовуємо flexbox */
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: center; /* Центруємо по горизонталі */
+    justify-content: center; /* Центруємо по вертикалі */
+    padding: 20px; /* Відступи */
+    background-color: #4CAF50; /* Фоновий колір */
+    color: white; /* Колір тексту */
+}
+
+.header-content {
+    display: flex; /* Додаємо flexbox для контенту */
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: center; /* Центруємо по горизонталі */
+}
+
+.logo {
+    margin-bottom: 10px; /* Відступ між логотипом та заголовком */
+}
+
+.header-icon {
+    height: 50px; /* Висота логотипа */
+}
+
+.menu {
+    display: flex; /* Використовуємо flexbox для меню */
+    justify-content: center; /* Центруємо меню */
+}
+
+.menu ul {
+    display: flex; /* Використовуємо flexbox для списку */
+    list-style: none; /* Видаляємо маркери списку */
+    margin: 0; /* Прибираємо відступи */
+    padding: 0; /* Прибираємо відступи */
+}
+
+.menu li {
+    margin-left: 20px; /* Відступ між пунктами списку */
+    margin-right: 20px; /* Відступ між пунктами списку */
+}
+
+.menu a, .menu button {
+    color: white; /* Колір тексту */
+    text-decoration: none; /* Видаляємо підкреслення для посилань */
+    background: transparent; /* Прозорий фон для кнопок */
+    border: none; /* Видаляємо обведення для кнопок */
+    cursor: pointer; /* Курсор при наведенні */
+}
+
+.menu a:hover, .menu button:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+
+.logo img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav .menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .menu a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-icon {
+    height: 100px; /* Зменшуємо висоту іконки */
+    width: auto;  /* Зберігаємо пропорції */
+    margin-right: 10px; /* Відступ справа, якщо потрібно */
+}
+
+footer {
+    display: flex; /* Включаємо flexbox для футера */
+    flex-direction: column; /* Стовпцеве вирівнювання */
+    align-items: center; /* Центруємо елементи по горизонталі */
+    justify-content: center; /* Центруємо елементи по вертикалі */
+    text-align: center; /* Вирівнюємо текст по центру */
+    padding: 20px; /* Додаємо відступи */
+    background-color: #4CAF50; /* Фоновий колір */
+    color: white; /* Колір тексту */
+}
+
+.footer-content {
+    display: flex; /* Додаємо flexbox для контенту футера */
+    flex-direction: column; /* Вирівнюємо елементи по вертикалі */
+    align-items: center; /* Центруємо по горизонталі */
+}
+
+.footer-logo {
+    margin-bottom: 10px; /* Відступ між іконкою та посиланнями */
+}
+
+.footer-links ul {
+    padding: 0; /* Прибираємо відступи */
+    list-style: none; /* Видаляємо маркери списку */
+    display: flex; /* Використовуємо flexbox для розташування посилань */
+    justify-content: center; /* Центруємо посилання */
+}
+
+.footer-links li {
+    margin-left: 20px; /* Відступ між пунктами списку */
+    margin-right: 20px; /* Відступ між пунктами списку */
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Модальне вікно */
+/* Модальні форми */
+/* Кнопки навігації */
+.menu button {
+    background-color: #4CAF50; /* Зелений фон */
+    color: white; /* Білий текст */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Плавний перехід кольору */
+}
+
+.menu button:hover {
+    background-color: #45a049; /* Темніший відтінок при наведенні */
+}
+
+/* Модальні вікна */
+.modalForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.modalForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#registrationSuccessMessage, #feedbackSuccessMessage {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стилі для секції розрахунку периметра трикутника */
+#trianglePerimeterSection {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+

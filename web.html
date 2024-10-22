@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Мій Мобільний Застосунок</title>
+    <meta name="description" content="Створіть обліковий запис або увійдіть у свій обліковий запис для використання нашого мобільного застосунку. Простий, веселий та креативний спосіб керувати вашими завданнями.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- HEADER -->
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/166/960/non_2x/phone-icon-logo-design-template-vector.jpg" alt="Logo" class="header-icon">
+        </div>
+        <h1>МІЙ ЗАСТОСУНОК</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#about">Про додаток</a></li>
+                <li><a href="#download">Як завантажити</a></li>
+                <li><a href="#pricing">Ціна</a></li>
+                <li><a href="#about-us">Про нас</a></li>
+                <li><a href="#contact">Контакти</a></li>
+                <li><button id="showLoginForm">Авторизація</button></li>
+                <li><button id="showRegistrationForm">Реєстрація</button></li>
+                <li><button id="showFeedbackForm">Зворотний зв'язок</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- /HEADER -->
+
+<!-- Main section -->
+<main>
+    <!-- Секція для розрахунку периметра трикутника -->
+    <section id="trianglePerimeterSection">
+        <h2>Розрахунок периметра трикутника</h2>
+        <form id="trianglePerimeterForm">
+            <label for="sideA">Сторона A:</label>
+            <input type="number" id="sideA" name="sideA" required>
+            <span class="error-message" id="sideAError"></span>
+
+            <label for="sideB">Сторона B:</label>
+            <input type="number" id="sideB" name="sideB" required>
+            <span class="error-message" id="sideBError"></span>
+
+            <label for="sideC">Сторона C:</label>
+            <input type="number" id="sideC" name="sideC" required>
+            <span class="error-message" id="sideCError"></span>
+
+            <button type="button" id="calculatePerimeter">Розрахувати периметр</button>
+            <button type="reset" id="clearForm">Очистити форму</button>
+        </form>
+
+        <div id="perimeterResult"></div>
+
+        <label>
+            <input type="checkbox" id="moreInfoToggle"> Показати додаткову інформацію
+        </label>
+        <div id="additionalInfo" style="display: none;">
+            <p>Периметр трикутника розраховується за формулою: P = A + B + C, де A, B, C — довжини сторін трикутника.</p>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>Про додаток</h2>
+        <p><b>Мій Застосунок</b> — це мобільний додаток, що допомагає вам керувати своїми завданнями та підвищувати продуктивність.</p>
+        <p>Спілкуйтеся з друзями, діліться своїми досягненнями та відкривайте нові можливості разом з нами!</p>
+    </section>
+
+    <section id="download">
+        <h2>Як завантажити</h2>
+        <p>Додаток доступний для платформ iOS та Android. Завантажте його за допомогою посилань нижче:</p>
+        <ul>
+            <li><a href="https://play.google.com/store/apps/details?id=com.example.app">Завантажити з Google Play</a></li>
+            <li><a href="https://apps.apple.com/ru/app/example-app/id123456789">Завантажити з App Store</a></li>
+        </ul>
+    </section>
+
+    <section id="pricing">
+        <h2>Ціна</h2>
+        <p>Ви можете скористатися різними тарифами для використання нашого застосунку:</p>
+        <ol>
+            <li>Безкоштовний доступ до основних функцій</li>
+            <li>Преміум підписка — $9.99 на місяць</li>
+            <li>Професійний план — $19.99 на місяць</li>
+        </ol>
+    </section>
+
+    <section id="about-us">
+        <h2>Про нас</h2>
+        <p>Наша команда прагне створити найкращий досвід для користувачів, пропонуючи нові функції та оновлення нашого застосунку.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакти</h2>
+        <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Телефон: <a href="tel:+380123456789">+380 123 456 789</a></p>
+    </section>
+</main>
+<!-- /Main section -->
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/007/166/960/non_2x/phone-icon-logo-design-template-vector.jpg" alt="Website Logo" class="footer-icon">
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#about">Про додаток</a></li>
+                <li><a href="#download">Як завантажити</a></li>
+                <li><a href="#pricing">Ціна</a></li>
+                <li><a href="#about-us">Про нас</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2024 Мій Мобільний Застосунок. Всі права захищені.
+    </div>
+</footer>
+
+<!-- Модальне вікно для форми входу -->
+<div id="loginModal" class="modalForm">
+    <div class="modal-content">
+        <span class="close" id="closeLoginForm">&times;</span>
+        <form action="/sumbit" method="post">
+            <!-- Форма входу -->
+            <div id="loginForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button id="togglePassword" type="button" title="Показати пароль">
+                    <i id="eyeIcon" class="far fa-eye"></i>
+                </button>
+
+                <a href="reset-password.html">Відновлення паролю</a><br><br>
+
+                <input type="checkbox" id="stayLoggedIn" name="stayLoggedIn">
+                <label for="stayLoggedIn">Залишатися на сайті?</label><br><br>
+
+                <input type="submit" value="Увійти">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Модальне вікно для форми реєстрації -->
+<div id="registrationModal" class="modalForm">
+    <div class="modal-content">
+        <span class="close" id="closeRegistrationForm">&times;</span>
+        <form action="/register" method="post">
+            <!-- Форма реєстрації -->
+            <div id="registrationForm">
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="email" required><br><br>
+
+                <label for="regPassword">Пароль:</label>
+                <input type="password" id="regPassword" name="password" required>
+                <button id="toggleRegPassword" type="button" title="Показати пароль">
+                    <i id="regEyeIcon" class="far fa-eye"></i>
+                </button>
+
+                <label for="confirmPassword">Підтвердження пароля:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button id="toggleConfirmPassword" type="button" title="Показати пароль">
+                    <i id="confirmEyeIcon" class="far fa-eye"></i>
+                </button>
+
+                <input type="submit" value="Зареєструватися">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- Форма зворотного зв'язку -->
+<div id="feedbackFormContainer" class="modalForm">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="feedbackForm">
+            <h2>Форма зворотного зв'язку</h2>
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Електронна пошта:</label>
+            <input type="email" id="feedbackEmail" name="email" required>
+
+            <label for="subject">Тема звернення:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Текст повідомлення:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Відправити">
+        </form>
+        <div id="feedbackSuccessMessage" style="display: none;">Ваше повідомлення надіслано!</div>
+    </div>
+</div>
+<!-- Форма зворотного зв'язку -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+<script src="script.js"></script>
+<script src="trianglePerimeter.js"></script>
+
+
+</body>
+</html>
